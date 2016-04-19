@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idSheet: 1
+  code: MyString
+  numZones: 1
+
+two:
+  idSheet: 1
+  code: MyString
+  numZones: 1

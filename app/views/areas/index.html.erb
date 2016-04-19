@@ -1,0 +1,29 @@
+<h1>Listing areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>sheet_id</th>
+      <th>Code</th>
+      <th>Numzones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @areas.each do |area| %>
+      <tr>
+        <td><%= area.sheet_id %></td>
+        <td><%= area.code %></td>
+        <td><%= area.numZones %></td>
+        <td><%= link_to 'Show', area %></td>
+        <td><%= link_to 'Edit', edit_area_path(area) %></td>
+        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Area', new_area_path %>

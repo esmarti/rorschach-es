@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align: center;"><strong>Lámina <%= @sheet.name %></strong></h1>
+<div id="Fondo" style="margin-left: auto; margin-right: auto; width:770px; height:578px;z-index:1; visibility:visible; border-style: solid;background-image: url(<%= asset_path @sheet.background %>);">
+
+<%= link_to 'Edit', edit_sheet_path(@sheet) %> |
+<%= link_to 'Back', sheets_path %>

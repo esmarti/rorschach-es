@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idsheet:</strong>
+  <%= @area.sheet_id %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @area.code %>
+</p>
+
+<p>
+  <strong>Numzones:</strong>
+  <%= @area.numZones %>
+</p>
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>

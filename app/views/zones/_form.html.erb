@@ -1,0 +1,41 @@
+<%= form_for(@zone) do |f| %>
+  <% if @zone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zone.errors.count, "error") %> prohibited this zone from being saved:</h2>
+
+      <ul>
+      <% @zone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :coord_x %><br>
+    <%= f.number_field :coord_x %>
+  </div>
+  <div class="field">
+    <%= f.label :coord_y %><br>
+    <%= f.number_field :coord_y %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br>
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :z_index %><br>
+    <%= f.number_field :z_index %>
+  </div>
+  <div class="field">
+    <%= f.label :bg_image %><br>
+    <%= f.text_field :bg_image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

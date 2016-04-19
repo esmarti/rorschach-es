@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coord x:</strong>
+  <%= @zone.coord_x %>
+</p>
+
+<p>
+  <strong>Coord y:</strong>
+  <%= @zone.coord_y %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @zone.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @zone.height %>
+</p>
+
+<p>
+  <strong>Z index:</strong>
+  <%= @zone.z_index %>
+</p>
+
+<p>
+  <strong>Bg image:</strong>
+  <%= @zone.bg_image %>
+</p>
+
+<%= link_to 'Edit', edit_zone_path(@zone) %> |
+<%= link_to 'Back', zones_path %>
