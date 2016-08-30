@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408042249) do
+ActiveRecord::Schema.define(version: 20160605233401) do
 
   create_table "areas", force: true do |t|
     t.string   "code"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20160408042249) do
   create_table "areas_zones", id: false, force: true do |t|
     t.integer "area_id", null: false
     t.integer "zone_id", null: false
+  end
+
+  create_table "interpretations", force: true do |t|
+    t.string   "direction"
+    t.string   "formal_quality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "development_quality"
+    t.string   "name"
+    t.string   "description"
   end
 
   create_table "sheets", force: true do |t|

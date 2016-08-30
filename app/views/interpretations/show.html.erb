@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @interpretation.direction %>
+</p>
+
+<p>
+  <strong>Formal quality:</strong>
+  <%= @interpretation.formal_quality %>
+</p>
+
+<p>
+  <strong>DQ:</strong>
+  <%= @interpretation.development_quality %>
+</p>
+
+<p>
+  <strong>name:</strong>
+  <%= @interpretation.name %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @interpretation.description %>
+</p>
+
+<%= link_to 'Edit', edit_interpretation_path(@interpretation) %> |
+<%= link_to 'Back', interpretations_path %>

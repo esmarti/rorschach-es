@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :interpretations
+
   resources :areas
 
   resources :zones

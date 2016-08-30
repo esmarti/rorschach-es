@@ -30,6 +30,7 @@ Area.create({sheet_id: 1, code:	"Dd35", numZones: 1})
 Area.create({sheet_id: 1, code:	"Dd21", numZones: 3})
 Area.create({sheet_id: 1, code:	"Dd33", numZones: 1})
 Area.create({sheet_id: 1, code:	"Dd34", numZones: 1})
+Area.create({sheet_id: 1, code:	"W", numZones: 38}) #Respuesta global (toda la lamina)
 
 #add zones
 Zone.create({coord_x: 591, coord_y: 233, width: 59, height: 47, z_index: 17, bg_image: "lamina1/model_grey/img/Capa_1.png"})
