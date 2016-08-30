@@ -1,0 +1,4 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+// Si hay necesidad de tunear algun estilo, hacerlo antes de estas lineas de import.
+@import "bootstrap-sprockets";
+@import "bootstrap";
