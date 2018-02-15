@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mean: 
+  mean: 
+  sd: 
+  sd: 
+  min: 
+  min: 
+  max: 
+  max: 
+  freq: 1
+  median: 
+  median: 
+  mode: 
+  mode: 
+  sk: 
+  sk: 
+  ku: 
+  ku: 
+  variable: MyString
+
+two:
+  mean: 
+  mean: 
+  sd: 
+  sd: 
+  min: 
+  min: 
+  max: 
+  max: 
+  freq: 1
+  median: 
+  median: 
+  mode: 
+  mode: 
+  sk: 
+  sk: 
+  ku: 
+  ku: 
+  variable: MyString

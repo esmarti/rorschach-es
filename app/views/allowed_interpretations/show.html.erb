@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @allowed_interpretation.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @allowed_interpretation.description %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @allowed_interpretation.direction %>
+</p>
+
+<p>
+  <strong>Formal quality:</strong>
+  <%= @allowed_interpretation.formal_quality %>
+</p>
+
+<%= link_to 'Edit', edit_allowed_interpretation_path(@allowed_interpretation) %> |
+<%= link_to 'Back', allowed_interpretations_path %>

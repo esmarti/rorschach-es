@@ -1,0 +1,89 @@
+<%= form_for(@stat_non_pat_adult) do |f| %>
+  <% if @stat_non_pat_adult.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stat_non_pat_adult.errors.count, "error") %> prohibited this stat_non_pat_adult from being saved:</h2>
+
+      <ul>
+      <% @stat_non_pat_adult.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mean %><br>
+    <%= f.text_field :mean %>
+  </div>
+  <div class="field">
+    <%= f.label :mean %><br>
+    <%= f.text_field :mean %>
+  </div>
+  <div class="field">
+    <%= f.label :sd %><br>
+    <%= f.text_field :sd %>
+  </div>
+  <div class="field">
+    <%= f.label :sd %><br>
+    <%= f.text_field :sd %>
+  </div>
+  <div class="field">
+    <%= f.label :min %><br>
+    <%= f.text_field :min %>
+  </div>
+  <div class="field">
+    <%= f.label :min %><br>
+    <%= f.text_field :min %>
+  </div>
+  <div class="field">
+    <%= f.label :max %><br>
+    <%= f.text_field :max %>
+  </div>
+  <div class="field">
+    <%= f.label :max %><br>
+    <%= f.text_field :max %>
+  </div>
+  <div class="field">
+    <%= f.label :freq %><br>
+    <%= f.number_field :freq %>
+  </div>
+  <div class="field">
+    <%= f.label :median %><br>
+    <%= f.text_field :median %>
+  </div>
+  <div class="field">
+    <%= f.label :median %><br>
+    <%= f.text_field :median %>
+  </div>
+  <div class="field">
+    <%= f.label :mode %><br>
+    <%= f.text_field :mode %>
+  </div>
+  <div class="field">
+    <%= f.label :mode %><br>
+    <%= f.text_field :mode %>
+  </div>
+  <div class="field">
+    <%= f.label :sk %><br>
+    <%= f.text_field :sk %>
+  </div>
+  <div class="field">
+    <%= f.label :sk %><br>
+    <%= f.text_field :sk %>
+  </div>
+  <div class="field">
+    <%= f.label :ku %><br>
+    <%= f.text_field :ku %>
+  </div>
+  <div class="field">
+    <%= f.label :ku %><br>
+    <%= f.text_field :ku %>
+  </div>
+  <div class="field">
+    <%= f.label :variable %><br>
+    <%= f.text_field :variable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

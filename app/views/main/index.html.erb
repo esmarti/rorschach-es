@@ -1,0 +1,14 @@
+<h1>Menu Principal de la aplicacion</h1>
+
+<div>
+	<h3>Administracion de Pacientes</h3>
+	<%= link_to 'Nuevo', new_patient_path %> | <%= link_to 'Editar', patients_path %> | <%= link_to 'Eliminar', @patient %>
+</div>
+<div>
+	<h3>Administracion de Protocolos</h3>
+	<%= link_to 'Nuevo', @protocol %> | <%= link_to 'Editar', @protocol %> | <%= link_to 'Eliminar', @protocol %>
+</div>
+<div>
+	<h3>Consulta de BD</h3>
+	<%= link_to 'show', @database %> | <%= link_to 'show', @protocolResults %>
+</div>

@@ -1,0 +1,51 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :given_name %><br>
+    <%= f.text_field :given_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.check_box :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :isPatient %>
+    <%= f.check_box :isPatient %>
+  </div>
+  <%= fields_for @current_user do |user| %>
+    <div class="field">
+      <%= user.label :full_name, "Profesional a cargo" %><br>
+      <%= user.text_field :full_name, :value => @current_user.given_name+" "+@current_user.last_name %>
+    </div>
+    <div class="field">
+      <%= user.label :institution, "Institución" %><br>
+      <%= user.text_field :institution %>
+    </div>
+    <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

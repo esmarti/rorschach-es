@@ -1,0 +1,37 @@
+<p>
+  <strong>Given name:</strong>
+  <%= @patient.given_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @patient.phone %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @patient.age %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @patient.sex %>
+</p>
+
+<p>
+  <strong>Ispatient:</strong>
+  <%= @patient.isPatient %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @patient.users.length %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

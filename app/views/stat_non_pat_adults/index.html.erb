@@ -1,0 +1,59 @@
+<h1>Listing stat_non_pat_adults</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mean</th>
+      <th>Mean</th>
+      <th>Sd</th>
+      <th>Sd</th>
+      <th>Min</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Max</th>
+      <th>Freq</th>
+      <th>Median</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Mode</th>
+      <th>Sk</th>
+      <th>Sk</th>
+      <th>Ku</th>
+      <th>Ku</th>
+      <th>Variable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stat_non_pat_adults.each do |stat_non_pat_adult| %>
+      <tr>
+        <td><%= stat_non_pat_adult.mean %></td>
+        <td><%= stat_non_pat_adult.mean %></td>
+        <td><%= stat_non_pat_adult.sd %></td>
+        <td><%= stat_non_pat_adult.sd %></td>
+        <td><%= stat_non_pat_adult.min %></td>
+        <td><%= stat_non_pat_adult.min %></td>
+        <td><%= stat_non_pat_adult.max %></td>
+        <td><%= stat_non_pat_adult.max %></td>
+        <td><%= stat_non_pat_adult.freq %></td>
+        <td><%= stat_non_pat_adult.median %></td>
+        <td><%= stat_non_pat_adult.median %></td>
+        <td><%= stat_non_pat_adult.mode %></td>
+        <td><%= stat_non_pat_adult.mode %></td>
+        <td><%= stat_non_pat_adult.sk %></td>
+        <td><%= stat_non_pat_adult.sk %></td>
+        <td><%= stat_non_pat_adult.ku %></td>
+        <td><%= stat_non_pat_adult.ku %></td>
+        <td><%= stat_non_pat_adult.variable %></td>
+        <td><%= link_to 'Show', stat_non_pat_adult %></td>
+        <td><%= link_to 'Edit', edit_stat_non_pat_adult_path(stat_non_pat_adult) %></td>
+        <td><%= link_to 'Destroy', stat_non_pat_adult, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat non pat adult', new_stat_non_pat_adult_path %>

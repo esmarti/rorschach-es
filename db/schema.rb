@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605233401) do
+ActiveRecord::Schema.define(version: 20180214103458) do
+
+  create_table "allowed_interpretations", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "direction"
+    t.string   "formal_quality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "areas", force: true do |t|
     t.string   "code"
@@ -36,7 +45,32 @@ ActiveRecord::Schema.define(version: 20160605233401) do
     t.string   "development_quality"
     t.string   "name"
     t.string   "description"
+    t.integer  "rorschachTest_id"
   end
+
+  add_index "interpretations", ["rorschachTest_id"], name: "index_interpretations_on_rorschachTest_id"
+
+  create_table "patients", force: true do |t|
+    t.string   "given_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.integer  "age"
+    t.boolean  "sex"
+    t.boolean  "isPatient"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "institution"
+  end
+
+  create_table "rorschach_tests", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "patient_id"
+  end
+
+  add_index "rorschach_tests", ["patient_id"], name: "index_rorschach_tests_on_patient_id"
+  add_index "rorschach_tests", ["user_id"], name: "index_rorschach_tests_on_user_id"
 
   create_table "sheets", force: true do |t|
     t.string   "name"
@@ -44,6 +78,36 @@ ActiveRecord::Schema.define(version: 20160605233401) do
     t.datetime "updated_at"
     t.string   "background"
   end
+
+  create_table "stat_non_pat_adults", force: true do |t|
+    t.decimal  "mean",       precision: 5, scale: 2
+    t.decimal  "sd",         precision: 5, scale: 2
+    t.decimal  "min",        precision: 5, scale: 2
+    t.decimal  "max",        precision: 5, scale: 2
+    t.integer  "freq"
+    t.decimal  "median",     precision: 5, scale: 2
+    t.decimal  "mode",       precision: 5, scale: 2
+    t.decimal  "sk",         precision: 5, scale: 2
+    t.decimal  "ku",         precision: 5, scale: 2
+    t.string   "variable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "given_name"
+    t.string   "last_name"
+    t.string   "licence_number"
+    t.string   "institution"
+    t.string   "phone"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
   create_table "zones", force: true do |t|
     t.integer  "coord_x"
